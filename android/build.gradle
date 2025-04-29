@@ -1,35 +1,44 @@
-group 'pt.tribeiro.flutter_pdf_viewer'
-version '1.0-SNAPSHOT'
+group 'pt.tribeiro.flutter_plugin_pdf_viewer'
+version '1.0'
 
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:8.2.0'
     }
 }
 
 rootProject.allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    namespace "pt.tribeiro.flutter_plugin_pdf_viewer"
     compileSdkVersion 34
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 16
+        targetSdkVersion 34
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    
     lintOptions {
         disable 'InvalidPackage'
+    }
+
+    // Add resource merging rules
+    androidResources {
+        additionalParameters += [
+            "--warn-manifest-validation",
+            "--auto-add-overlay"
+        ]
     }
 }

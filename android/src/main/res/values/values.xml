@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="ColorStateListItem" tools:ignore="ResourceName">
+        <attr name="android:color" />
+        <attr name="android:alpha" />
+        <!-- Explicitly exclude lStar -->
+    </declare-styleable>
+</resources> 
