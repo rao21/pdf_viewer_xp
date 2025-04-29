@@ -23,7 +23,7 @@ apply plugin: 'com.android.library'
 
 android {
     namespace "pt.tribeiro.flutter_plugin_pdf_viewer"
-    compileSdkVersion 30
+    compileSdkVersion 34
 
     defaultConfig {
         minSdkVersion 21
